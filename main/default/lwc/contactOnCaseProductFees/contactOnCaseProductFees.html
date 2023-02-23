@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Related Contact Product Fees Details" icon-name="standard:contact">
+      
+        <template lwc:if={productFeesDetails}>
+            <div class="slds-m-around_medium">
+                <lightning-datatable key-field="id" data={productFeesDetails} columns={columns} hide-checkbox-column>
+                </lightning-datatable>
+            </div>
+        </template>
+      
+        <template lwc:if={error}>
+            {error}
+        </template>
+    </lightning-card>
+</template>
